@@ -137,5 +137,7 @@ def cat():
 def example():
     name='Лабаскина София, Переладова Алёна'
     numberlaba = 'Лабораторная работа 2'
-    return render_template('example.html', name=name, numberlaba=numberlaba)
+    group = 'ФБИ-12'
+    kurs = '3 курс'
+    return render_template('example.html', name=name, numberlaba=numberlaba, group=group,kurs=kurs)
     
