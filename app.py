@@ -136,5 +136,6 @@ def cat():
 @app.route('/lab2/example')
 def example():
     name='Лабаскина София, Переладова Алёна'
-    return render_template('example.html', name=name)
+    numberlaba = 'Лабораторная работа 2'
+    return render_template('example.html', name=name, numberlaba=numberlaba)
     
