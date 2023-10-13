@@ -14,6 +14,13 @@
     <div>11*28={{11*28}}</div>
     <div>8452/793={{8452/793}}</div>
     <div>45**8={{45**8}}</div>
+    <div>
+        <ul>
+            {% for f in fruits %}
+            <li>{{ f.name }}: {{f.price}} &#x20bd;</li>
+            {% endfor %}
+        </ul>
+    </div>
     <footer>
         &copy; 
         {% if name %}
