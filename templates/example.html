@@ -3,19 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабаскина София, Переладова Алёна. {{numberlaba}}</title>
+    <title>{{name}}, {{numberlaba}}, {{kurs}} </title>
     <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
 </head>
 <body>
     <header>
-        НГТУ, ФБ, {{numberlaba}}
+        WEB-программирование, часть 2. {% if numberlaba %}Лабораторная работа 2{% endif %}
     </header>
     <main>Основной контент</main>
     <div>11*28={{11*28}}</div>
     <div>8452/793={{8452/793}}</div>
     <div>45**8={{45**8}}</div>
     <footer>
-        &copy; {{name}}, ФБИ-12, 3 курс, 2023
+        &copy; 
+        {% if name %}
+            {{ name }}, 
+        {% else %}
+            Повар-кондитер
+        {% endif %}
+        {% if group %}
+            {{ group }}, 
+        {% else %}
+            Группа по интересам
+        {% endif %} 
+        {% if kurs %}
+            {{ kurs }}, 
+        {% else %}
+            Держим курс на север
+        {% endif %} 
     </footer>
 </body>
 </html>
