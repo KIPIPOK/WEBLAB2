@@ -135,9 +135,8 @@ def cat():
 '''
 @app.route('/lab2/example')
 def example():
-    name='Лабаскина София, Переладова Алёна'
-    numberlaba = 'Лабораторная работа 2'
-    group = 'ФБИ-12'
-    kurs = '3 курс'
-    return render_template('example.html', name=name, numberlaba=numberlaba, group=group,kurs=kurs)
+    name, numberlaba, group, kurs ='Лабаскина София, Переладова Алёна', 'Лабораторная работа 2', 'ФБИ-12', '3 курс'
+    fruits = [{'name':'яблочки', 'price': 100},{'name':'груши', 'price': 120}, {'name':'апельсины', 'price': 80}, {'name':'мандарины', 'price': 95}, {'name':'манго', 'price': 321}]
+    return render_template('example.html',
+                            name=name, numberlaba=numberlaba, group=group,kurs=kurs, fruits=fruits)
     

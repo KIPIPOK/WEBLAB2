@@ -21,6 +21,12 @@
             {% endfor %}
         </ul>
     </div>
+    <div>
+        <ul>
+            {% for b in books %}
+            <li>{{ b.author }}: {{ b.name }}, {{b.zanr}}, {{b.str}} стр.</li>
+            {% endfor %}
+        </ul>
     <footer>
         &copy; 
         {% if name %}
