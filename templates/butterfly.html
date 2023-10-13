@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабаскина София, Переладова Алёна, {%block lab%} {%endblock%} </title>
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+</head>
+<body>
+    <header>
+        WEB-программирование, часть 2. {{ self.lab() }}
+    </header>
+    <main>{%block main%} {%endblock%} </main>
+    <h1>Бабочки</h1>
+        <div>Голубянка</div>
+        <div><img src="../static/golubyanka.jpeg">
+        <div>Сатурния Луна</div>
+        <div><img src="../static/saturnialuna.jpg"></div>
+        <div>Огнёвка</div>
+        <div><img src="../static/ognevka.jpg"></div>
+        <div>Хеликоптер какой-то</div>
+        <div><img src="../static/hypercompescribonia.jpg"></div>
+        <div>Драй</div>
+        <div><img src="../static/dryocamparubicunda.jpg"></div>
+    <footer>
+        &copy; Лабаскина София, Переладова Алёна, ФБИ-12, 3 курс, 2023
+    </footer>  
+</body>
+</html>
