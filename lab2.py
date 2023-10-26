@@ -1,4 +1,4 @@
-from flask import Blueprint, redirect, url_for
+from flask import Blueprint,render_template
 lab2 = Blueprint('lab2', __name__)
 
 @lab2.route('/lab2/example')
@@ -21,7 +21,7 @@ def example():
     return render_template('example.html',
                             name=name, numberlaba=numberlaba, group=group,kurs=kurs, fruits=fruits, books=books)
 @lab2.route('/lab2/')
-def lab2():
+def lab():
     return render_template('lab2.html')
 @lab2.route('/lab2/butterfly')
 def butterfly():
