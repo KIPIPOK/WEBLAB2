@@ -17,13 +17,16 @@ def login():
         errors['password'] = 'не введен пароль'
 
     if username == 'alex' and password == '123':
-        return render_template('successlogin.html', username = username)
+        return render_template('success.html', username = username)
 
     error = 'Неверный логин и/или пароль'
     return render_template('login.html', error = error, username=username, password=password, errors=errors)
+
+
 @lab4.route('/lab4/fridge', methods = ['GET', 'POST'])
 def fridge():
     return render_template('fridge.html')
+
 
 @lab4.route("/set_temperature", methods=["POST"])
 def set_temperature():
@@ -49,6 +52,8 @@ def set_temperature():
         flakes = 1
 
     return render_template("fridge.html", error=error, success=success, temperature=temperature, flakes=flakes)
+
+
 @lab4.route('/lab4/zerno')
 def zerno():
     return render_template('order_grain.html')
@@ -96,6 +101,13 @@ def cookies():
     color = request.form.get('color')
     bgcolor = request.form.get('bgcolor')
     fontsize = request.form.get('fontsize')
+
+    if color == bgcolor:
+        return "Цвет текста не должен совпадать с цветом фона."
+    
+    if int(fontsize) < 5 or int(fontsize) > 30:
+        return "Размер текста должен быть от 5px до 30px."
+    
     headers = {
         'Set-Cookies': 'color=' + color + '; path=/',
         'Set-Cookies': 'bgcolor=' + bgcolor + '; path=/',
