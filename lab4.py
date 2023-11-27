@@ -109,9 +109,7 @@ def cookies():
         return "Размер текста должен быть от 5px до 30px."
     
     headers = {
-        'Set-Cookies': 'color=' + color + '; path=/',
-        'Set-Cookies': 'bgcolor=' + bgcolor + '; path=/',
-        'Set-Cookies': 'fontsize=' + fontsize + '; path=/',
+        'Set-Cookie': f'color={color}; path=/, bgcolor={bgcolor}; path=/, fontsize={fontsize}; path=/',
         'Location': '/lab4/cookies'
     }
     return '', 303, headers
